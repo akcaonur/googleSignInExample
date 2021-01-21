@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="googleSignInExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dc2-bl-pXx" customClass="GIDSignInButton">
+                                <rect key="frame" x="20" y="144" width="374" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="hoQ-6M-MVo"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXm-6z-aPQ">
+                                <rect key="frame" x="20" y="712" width="374" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.14576937100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="1e8-QL-0Dm"/>
+                                </constraints>
+                                <state key="normal" title="Sign Out">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnCikisYapPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2A9-0b-RdN"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LOH-Ey-jNL">
+                                <rect key="frame" x="10" y="642" width="394" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Vie-J4-5Ag"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Dc2-bl-pXx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="1KT-mw-h3U"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dc2-bl-pXx" secondAttribute="trailing" constant="20" id="RRd-yV-EUf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="VXm-6z-aPQ" secondAttribute="bottom" constant="100" id="TME-Ez-Uc8"/>
+                            <constraint firstItem="LOH-Ey-jNL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="fCR-fD-O5f"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VXm-6z-aPQ" secondAttribute="trailing" constant="20" id="gev-3K-Usw"/>
+                            <constraint firstItem="Dc2-bl-pXx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="pf6-Is-SgM"/>
+                            <constraint firstItem="VXm-6z-aPQ" firstAttribute="top" secondItem="LOH-Ey-jNL" secondAttribute="bottom" constant="20" id="rVp-1r-fb6"/>
+                            <constraint firstItem="VXm-6z-aPQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="sur-vO-D4h"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LOH-Ey-jNL" secondAttribute="trailing" constant="10" id="yWe-Ka-Vv5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnSignInButton" destination="Dc2-bl-pXx" id="2on-Ra-OQn"/>
+                        <outlet property="lblInfo" destination="LOH-Ey-jNL" id="koO-VF-XwF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="29" y="89"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
